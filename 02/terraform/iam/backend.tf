@@ -1,7 +1,8 @@
 terraform {
   backend "s3" {
-    region = "us-west-2"
-    bucket = "k8sclass-tf-state"
+    profile = "free-aws"
+    region = "us-east-2"
+    bucket = "k8sclass-tf-state-mush"
     key = "iam/terraform.tfstate"
   }
 }

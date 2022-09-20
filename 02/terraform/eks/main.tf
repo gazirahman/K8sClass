@@ -3,8 +3,8 @@
 data "terraform_remote_state" "iam" {
   backend = "s3"
   config = {
-    region = "us-west-2"
-    bucket = "k8sclass-tf-state"
+    region = "us-east-2"
+    bucket = "k8sclass-tf-state-mush"
     key    = "iam/terraform.tfstate"
   }
 }
@@ -12,8 +12,8 @@ data "terraform_remote_state" "iam" {
 data "terraform_remote_state" "vpc" {
   backend = "s3"
   config = {
-    region = "us-west-2"
-    bucket = "k8sclass-tf-state"
+    region = "us-east-2"
+    bucket = "k8sclass-tf-state-mush"
     key    = "network/terraform.tfstate"
   }
 }
@@ -24,7 +24,7 @@ locals {
 }
 
 provider "aws" {
-  region  = "us-west-2"
+  region  = "us-east-2"
   assume_role {
     role_arn = local.iam_state.eks_dude_role.arn
   }

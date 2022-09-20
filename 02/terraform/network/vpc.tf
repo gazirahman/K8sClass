@@ -1,12 +1,12 @@
 
 locals {
-  region = "us-west-2"
+  region = "us-east-2"
 }
 
 module "vpc_example_simple-vpc" {
   source          = "terraform-aws-modules/vpc/aws"
   version         = "3.14.0"
-  name            = "simple-example"
+  name            = "k8sclass"
   cidr            = "10.0.0.0/16"
   azs             = ["${local.region}a", "${local.region}b", "${local.region}c"]
   private_subnets = ["10.0.1.0/24", "10.0.2.0/24", "10.0.3.0/24"]

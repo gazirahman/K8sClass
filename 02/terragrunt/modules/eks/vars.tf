@@ -10,7 +10,7 @@ variable "public_subnets" {
 
 variable "region" {
   type        = string
-  description = "region: e.g: us-west-2"
+  description = "region: e.g: us-east-2"
 }
 
 variable "k8s_version" {

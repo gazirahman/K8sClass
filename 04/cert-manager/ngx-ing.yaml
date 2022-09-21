@@ -9,10 +9,10 @@ metadata:
 spec:
   tls:
   - hosts:
-    - k8s.castlerock.ai
-    secretName: ngx-tls-cert
+    - k8s.gazirahman.com
+    secretName: ngx-tls-cert-gazi
   rules:
-    - host: k8s.castlerock.ai
+    - host: k8s.gazirahman.com
       http:
         paths:
           - path: "/"

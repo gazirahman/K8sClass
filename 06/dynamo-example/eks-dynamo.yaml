@@ -59,10 +59,10 @@ metadata:
 spec:
   tls:
   - hosts:
-    - dynamo.k8s.gazirahman.com
+    - dynamo.k8s.gazirahman.dev
     secretName: eks-dynamo-tls-cert
   rules:
-    - host: dynamo.k8s.gazirahman.com
+    - host: dynamo.k8s.gazirahman.dev
       http:
         paths:
         - backend:

@@ -14,7 +14,7 @@ spec:
   provider: 
     aws:
       service: SecretsManager
-      region: us-west-2
+      region: us-east-2
 ---
 apiVersion: external-secrets.io/v1beta1
 kind: ExternalSecret
@@ -83,7 +83,7 @@ spec:
       #serviceAccountName: dynamo-users
       containers:
         - name: k8s-sample-api
-          image: 188966951897.dkr.ecr.us-west-2.amazonaws.com/k8s-sample/api
+          image: 079742931427.dkr.ecr.us-east-2.amazonaws.com/k8s-sample/api
           command: ["/code/run.sh"]
           ports:
             - containerPort: 80
@@ -158,10 +158,10 @@ metadata:
 spec:
   tls:
     - hosts:
-        - api.k8s.castlerock.ai
+        - api.k8s.gazirahman.com
       secretName: k8s-sample-api-tls-cert
   rules:
-    - host: api.k8s.castlerock.ai
+    - host: api.k8s.gazirahman.com
       http:
         paths:
           - backend:

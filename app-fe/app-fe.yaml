@@ -15,7 +15,7 @@ spec:
       #serviceAccountName: dynamo-users
       containers:
         - name: k8s-sample-fe
-          image: 188966951897.dkr.ecr.us-west-2.amazonaws.com/k8s-sample/fe
+          image: 079742931427.dkr.ecr.us-east-2.amazonaws.com/k8s-sample/fe
           ports:
             - containerPort: 80
 ---
@@ -43,10 +43,10 @@ metadata:
 spec:
   tls:
     - hosts:
-        - app.k8s.castlerock.ai
+        - app.k8s.gazirahman.com
       secretName: k8s-sample-app-tls-cert
   rules:
-    - host: app.k8s.castlerock.ai
+    - host: app.k8s.gazirahman.com
       http:
         paths:
           - backend:

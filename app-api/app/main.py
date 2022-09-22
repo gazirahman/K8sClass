@@ -35,8 +35,8 @@ logger.info("Hello, world!")
 origins = [
     "http://localhost",
     "http://localhost:3000",
-    "https://app.k8s.castlerock.ai",
-    "https://www.app.k8s.castlerock.ai",
+    "https://app.k8s.gazirahman.com",
+    "https://www.app.k8s.gazirahman.com",
 ]
 
 app.add_middleware(

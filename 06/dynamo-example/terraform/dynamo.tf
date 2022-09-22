@@ -9,7 +9,8 @@
 # https://www.terraform.io/docs/providers/aws/index.html
 # select the region you want to perform this operation in. 
 provider "aws" {
-  region = "us-west-2"
+  profile = "eksdude"
+  region = "us-east-2"
 }
 
 resource "aws_dynamodb_table" "dynamoUsers" {
@@ -30,8 +31,8 @@ resource "aws_dynamodb_table_item" "dynamoUsers" {
   item = <<EOF
 {
   "id": {"S": "12345"},
-  "email" : {"S": "mal@auradon.kingdom" },
-  "name" : {"S": "Mal" }
+  "email" : {"S": "mustaeen@gazirahman.com" },
+  "name" : {"S": "Mustaeen" }
 }
 EOF
 }

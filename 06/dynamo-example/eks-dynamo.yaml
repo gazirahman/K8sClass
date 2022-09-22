@@ -3,7 +3,7 @@ kind: ConfigMap
 metadata:
   name: eks-dynamo
 data:
-  region: us-west-2
+  region: us-east-2
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -22,7 +22,7 @@ spec:
       #serviceAccountName: dynamo-users
       containers:
       - name: eks-dynamo
-        image: 188966951897.dkr.ecr.us-west-2.amazonaws.com/vallard/eks-dynamo:latest
+        image: 079742931427.dkr.ecr.us-east-2.amazonaws.com/k8sclass/eks-dynamo:latest
         ports: 
           - containerPort: 80
         env:
@@ -59,10 +59,10 @@ metadata:
 spec:
   tls:
   - hosts:
-    - dynamo.k8s.castlerock.ai
+    - dynamo.k8s.gazirahman.com
     secretName: eks-dynamo-tls-cert
   rules:
-    - host: dynamo.k8s.castlerock.ai
+    - host: dynamo.k8s.gazirahman.com
       http:
         paths:
         - backend:

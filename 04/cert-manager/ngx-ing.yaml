@@ -9,10 +9,10 @@ metadata:
 spec:
   tls:
   - hosts:
-    - k8s.gazirahman.com
+    - k8s.gazirahman.dev
     secretName: ngx-tls-cert-gazi
   rules:
-    - host: k8s.gazirahman.com
+    - host: k8s.gazirahman.dev
       http:
         paths:
           - path: "/"

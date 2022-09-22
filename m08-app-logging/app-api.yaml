@@ -163,10 +163,10 @@ metadata:
 spec:
   tls:
     - hosts:
-        - api.k8s.gazirahman.com
+        - api.k8s.gazirahman.dev
       secretName: k8s-sample-api-tls-cert
   rules:
-    - host: api.k8s.gazirahman.com
+    - host: api.k8s.gazirahman.dev
       http:
         paths:
           - backend:

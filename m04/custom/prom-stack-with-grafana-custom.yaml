@@ -1,7 +1,7 @@
 # customize with: https://github.com/prometheus-community/helm-charts/blob/main/charts/kube-prometheus-stack/values.yaml
 alertmanager:
   enabled: true
-  baseURL: "https://alertmanager.k8s.gazirahman.com"
+  baseURL: "https://alertmanager.k8s.gazirahman.dev"
   ingress:
     enabled: true
     annotations:
@@ -11,11 +11,11 @@ alertmanager:
       nginx.ingress.kubernetes.io/auth-secret: htpasswd
       nginx.ingress.kubernetes.io/auth-realm: "Enter your credentials"
     hosts:
-      - alertmanager.k8s.gazirahman.com
+      - alertmanager.k8s.gazirahman.dev
     tls:
       - secretName: alertmanager-tls
         hosts:
-          - alertmanager.k8s.gazirahman.com
+          - alertmanager.k8s.gazirahman.dev
 
 prometheus:
   ingress:
@@ -27,17 +27,17 @@ prometheus:
       nginx.ingress.kubernetes.io/auth-secret: htpasswd
       nginx.ingress.kubernetes.io/auth-realm: "Enter your credentials"
     hosts:
-      - prometheus.k8s.gazirahman.com
+      - prometheus.k8s.gazirahman.dev
     tls:
       - secretName: prometheus-tls
         hosts:
-          - prometheus.k8s.gazirahman.com
+          - prometheus.k8s.gazirahman.dev
 
   prometheusSpec:
     retention: 14d
     scrapeInterval: 30s
     evaluationInterval: 30s
-    externalUrl: "https://prometheus.k8s.gazirahman.com"
+    externalUrl: "https://prometheus.k8s.gazirahman.dev"
     storageSpec:
       volumeClaimTemplate:
         spec:
@@ -59,11 +59,11 @@ grafana:
       nginx.ingress.kubernetes.io/auth-secret: htpasswd
       nginx.ingress.kubernetes.io/auth-realm: "Enter Your Credentials"
     hosts:
-      - grafana.k8s.gazirahman.com
+      - grafana.k8s.gazirahman.dev
     tls:
       - secretName: grafana-tls
         hosts:
-          - grafana.k8s.gazirahman.com
+          - grafana.k8s.gazirahman.dev
 
   defaultDashboardsEnabled: true
   adminPassword: password
@@ -79,7 +79,7 @@ grafana:
       enabled: true
       execute_alerts: true
     server:
-      domain: grafana.k8s.gazirahman.com
+      domain: grafana.k8s.gazirahman.dev
       root_url: https://%(domain)s/
     dashboards:
       default_home_dashboard_path: /tmp/dashboards/k8s-dashboard.json

@@ -24,10 +24,10 @@ metadata:
 spec:
   tls:
   - hosts:
-    - kibana.k8s.gazirahman.com
+    - kibana.k8s.gazirahman.dev
     secretName: kibana-tls-cert
   rules:
-    - host: kibana.k8s.gazirahman.com
+    - host: kibana.k8s.gazirahman.dev
       http:
         paths:
           - path: "/" 

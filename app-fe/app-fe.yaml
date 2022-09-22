@@ -43,10 +43,10 @@ metadata:
 spec:
   tls:
     - hosts:
-        - app.k8s.gazirahman.com
+        - app.k8s.gazirahman.dev
       secretName: k8s-sample-app-tls-cert
   rules:
-    - host: app.k8s.gazirahman.com
+    - host: app.k8s.gazirahman.dev
       http:
         paths:
           - backend:
